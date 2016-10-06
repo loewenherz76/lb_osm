@@ -1,0 +1,23 @@
+/*
+.leaflet-google-layer{
+	z-index: 0 !important;
+}
+
+.leaflet-control-container,
+.leaflet-map-pane{
+	z-index: 100;
+	border:1px solid red;
+}
+*/
+
+.leaflet-popup{
+	width:250px;
+}
+
+.leaflet-popup img{
+	margin-bottom:15px;
+}
+
+.leaflet-popup a.btn{
+	margin-top:15px;
+}

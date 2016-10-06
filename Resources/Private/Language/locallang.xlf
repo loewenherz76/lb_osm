@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-24T14:42:40Z" product-name="lb_osm">
+		<header/>
+		<body>
+			<trans-unit id="tx_lbosm_domain_model_osm">
+				<source>O S M</source>
+			</trans-unit>
+
+			<trans-unit id="tab-map">
+				<source>Einstellungen für Karte</source>
+			</trans-unit>
+			<trans-unit id="tab-poi">
+				<source>Einstellungen für POI</source>
+			</trans-unit>
+
+			<trans-unit id="maps-typ">
+				<source>Kartentyp</source>
+			</trans-unit>
+			<trans-unit id="select-title">
+				<source>Auswahl</source>
+			</trans-unit>
+			<trans-unit id="map-height">
+				<source>Höhe der Karte</source>
+			</trans-unit>
+			<trans-unit id="map-lat">
+				<source>Karte / Breitengrad</source>
+			</trans-unit>
+			<trans-unit id="map-lon">
+				<source>Karte / Längengrad</source>
+			</trans-unit>
+			<trans-unit id="map-max">
+				<source>Zoomstufe</source>
+			</trans-unit>
+			<trans-unit id="map-maxZoom">
+				<source>maximale Zoomstufe</source>
+			</trans-unit>
+
+			<trans-unit id="poi-title">
+				<source>Einrichtung / Firma</source>
+			</trans-unit>
+			<trans-unit id="poi-image">
+				<source>Logo / Bild</source>
+			</trans-unit>
+			<trans-unit id="poi-descr">
+				<source>Kurzbeschreibung oder Anschrift</source>
+			</trans-unit>
+			<trans-unit id="poi-street">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="poi-zip">
+				<source>PLZ</source>
+			</trans-unit>
+			<trans-unit id="poi-location">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="poi-phone">
+				<source>Telefon</source>
+			</trans-unit>
+			<trans-unit id="poi-fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="poi-email">
+				<source>E-Mail</source>
+			</trans-unit>
+			<trans-unit id="poi-lat">
+				<source>Standort /  Breitengrad</source>
+			</trans-unit>
+			<trans-unit id="poi-lon">
+				<source>Standort / Längengrad</source>
+			</trans-unit>
+			<trans-unit id="phone">
+				<source>Telefon</source>
+			</trans-unit>
+			<trans-unit id="telefax">
+				<source>Telefax</source>
+			</trans-unit>
+			<trans-unit id="email">
+				<source>E-Mail</source>
+			</trans-unit>
+
+			<trans-unit id="route-planner">
+				<source>Routenplaner</source>
+			</trans-unit>
+			<trans-unit id="route-planner-label-1">
+				<source>nein</source>
+			</trans-unit>
+			<trans-unit id="route-planner-label-2">
+				<source>ja</source>
+			</trans-unit>
+
+			<trans-unit id="poi-icon">
+				<source>Icon für Marker</source>
+			</trans-unit>
+			<trans-unit id="poi-icon-shadow">
+				<source>Schatten für Marker</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

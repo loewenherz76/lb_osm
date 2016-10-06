@@ -1,0 +1,47 @@
+plugin.tx_lbosm_pi1 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_lbosm_pi1.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_lbosm_pi1.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_lbosm_pi1.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_lbosm_pi1.persistence.storagePid}
+	}
+}
+
+plugin.tx_lbosm._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-lb-osm table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-lb-osm table th {
+		font-weight:bold;
+	}
+
+	.tx-lb-osm table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
+
+
+

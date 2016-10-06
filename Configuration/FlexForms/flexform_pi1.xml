@@ -1,0 +1,287 @@
+<T3DataStructure>
+	<sheets>
+		<seite1>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:tab-map</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexForm.MapTyp>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:maps-typ</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:select-title</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">OpenstreepMap</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Google Maps API</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.flexForm.MapTyp>
+
+					<settings.flexForm.MapHeight>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:map-height</label>
+							<config>
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.flexForm.MapHeight>
+
+					<settings.flexForm.MapLat>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:map-lat</label>
+							<config>
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.flexForm.MapLat>
+
+					<settings.flexForm.MapLon>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:map-lon</label>
+							<config>
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.flexForm.MapLon>
+
+					<settings.flexForm.zoom>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:map-max</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">12</numIndex>
+										<numIndex index="1">12</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">13</numIndex>
+										<numIndex index="1">13</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">14</numIndex>
+										<numIndex index="1">14</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.flexForm.zoom>
+
+					<settings.flexForm.maxZoom>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:map-maxZoom</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">16</numIndex>
+										<numIndex index="1">16</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">17</numIndex>
+										<numIndex index="1">17</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">18</numIndex>
+										<numIndex index="1">18</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.flexForm.maxZoom>
+
+				</el>
+			</ROOT>
+		</seite1>
+		<seite2>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:tab-poi</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexForm.title>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-title</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.title>
+
+					<settings.flexForm.images>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-image</label>
+							<onChange>reload</onChange>
+							<config type="array">
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>jpg,gif,png,svg</allowed>
+								<max_size>2000</max_size>
+								<show_thumbs>1</show_thumbs>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</settings.flexForm.images>
+
+					<settings.flexForm.street>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-street</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.street>
+
+					<settings.flexForm.zip>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-zip</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.zip>
+
+					<settings.flexForm.location>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-location</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.location>
+
+					<settings.flexForm.phone>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-phone</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.phone>
+
+					<settings.flexForm.telefax>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-fax</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.telefax>
+
+					<settings.flexForm.email>
+						<TCEforms>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-email</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.flexForm.email>
+
+					<settings.flexForm.lat>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-lat</label>
+							<config>
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.flexForm.lat>
+
+					<settings.flexForm.lon>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-lon</label>
+							<config>
+								<type>input</type>
+								<eval>required</eval>
+							</config>
+						</TCEforms>
+					</settings.flexForm.lon>
+
+					<settings.flexForm.routeplanner>
+						<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:route-planner</label>
+						<config>
+							<type>radio</type>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:route-planner-label-1</numIndex>
+									<numIndex index="1">0</numIndex>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<numIndex index="0">LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:route-planner-label-2</numIndex>
+									<numIndex index="1">1</numIndex>
+								</numIndex>
+							</items>
+						</config>
+					</settings.flexForm.routeplanner>
+
+
+					<settings.flexForm.poiIconMarker>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-icon</label>
+							<onChange>reload</onChange>
+							<config type="array">
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>png</allowed>
+								<max_size>2000</max_size>
+								<show_thumbs>1</show_thumbs>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</settings.flexForm.poiIconMarker>
+
+					<settings.flexForm.poiIconShadowMarker>
+						<TCEforms>
+							<exclude>0</exclude>
+							<label>LLL:EXT:lb_osm/Resources/Private/Language/locallang.xlf:poi-icon-shadow</label>
+							<onChange>reload</onChange>
+							<config type="array">
+								<type>group</type>
+								<internal_type>file</internal_type>
+								<allowed>png</allowed>
+								<max_size>2000</max_size>
+								<show_thumbs>1</show_thumbs>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</settings.flexForm.poiIconShadowMarker>
+
+				</el>
+			</ROOT>
+		</seite2>
+	</sheets>
+</T3DataStructure>

@@ -1,0 +1,297 @@
+{namespace b=LeonhardBolschakow\LbOsm\ViewHelpers}
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://xsd.oliver-thiele.de/ns/typo3/cms-fluid/7.6/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<head>
+	<meta charset="utf-8">
+	<title>Template: </title>
+
+</head>
+<body>
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+	<f:if condition="{settings.flexForm.MapTyp} == ''">
+		<f:then>
+			Keinen Kartentyp ausgewählt!
+		</f:then>
+	</f:if>
+
+	<f:if condition="{settings.flexForm.MapTyp} == 1">
+		<f:then>
+			<f:if condition="{settings.flexForm.MapHeight} > 0">
+				<f:then>
+					<div id="mapid" style="height:{settings.flexForm.MapHeight}px;"></div>
+				</f:then>
+			</f:if>
+
+			<f:if condition="{settings.flexForm.MapLat} != ''">
+				<f:then>
+
+					<f:if condition="{settings.flexForm.MapLon} != ''">
+						<f:then>
+
+							<f:if condition="{settings.flexForm.zoom} != ''">
+								<f:then>
+
+
+									<script type="application/javascript">
+										<!--
+										var _lat = {settings.flexForm.MapLat -> f:format.raw()};
+										var _lon = {settings.flexForm.MapLon -> f:format.raw()};
+										var _zoom = {settings.flexForm.zoom -> f:format.raw()};
+										var _maxZoom = {settings.flexForm.maxZoom -> f:format.raw()};
+										var _MapTyp = {settings.flexForm.MapTyp -> f:format.raw()};
+
+										window.onload = function(){
+											init(_lat,_lon,_zoom,_maxZoom,_MapTyp);
+
+											if(temp.length > 0){
+												createPois(temp);
+											}
+										};
+
+										//-->
+									</script>
+
+
+								</f:then>
+							</f:if>
+
+						</f:then>
+					</f:if>
+
+				</f:then>
+			</f:if>
+
+			<f:if condition="{settings.flexForm.lat} != ''">
+				<f:then>
+					<f:if condition="{settings.flexForm.lon} != ''">
+						<f:then>
+							<f:if condition="{settings.flexForm.poiIconMarker} != ''">
+								<f:then>
+									<img src="{settings.flexForm.poiIconMarker -> f:format.raw()}" style="display:none;">
+								</f:then>
+							</f:if>
+							<f:if condition="{settings.flexForm.poiIconShadowMarker} != ''">
+								<f:then>
+									<img src="{settings.flexForm.poiIconShadowMarker -> f:format.raw()}" style="display:none;">
+								</f:then>
+							</f:if>
+
+							<script type="application/javascript"><!--
+
+								var temp = [];
+								var _l = temp.length;
+
+								temp[_l] = [];
+								temp[_l]['title'] = '{settings.flexForm.title -> f:format.raw()}';
+								temp[_l]['lat'] = {settings.flexForm.lat -> f:format.raw()};
+								temp[_l]['lon'] = {settings.flexForm.lon -> f:format.raw()};
+								temp[_l]['street'] = '{settings.flexForm.street -> f:format.raw()}';
+								temp[_l]['zip'] = '{settings.flexForm.zip -> f:format.raw()}';
+								temp[_l]['location'] = '{settings.flexForm.location -> f:format.raw()}';
+								temp[_l]['icon'] = '{settings.flexForm.poiIconMarker -> f:format.raw()}';
+								temp[_l]['icon-shadow'] = '{settings.flexForm.poiIconShadowMarker -> f:format.raw()}';
+
+							//--></script>
+
+							<f:if condition="{settings.flexForm.phone} != ''">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['phone'] = '<f:translate key="phone" />: {settings.flexForm.phone -> f:format.raw()}';
+									//--></script>
+								</f:then>
+							</f:if>
+							<f:if condition="{settings.flexForm.telefax} != ''">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['telefax'] = '<f:translate key="telefax" />: {settings.flexForm.telefax -> f:format.raw()}';
+									//--></script>
+								</f:then>
+							</f:if>
+							<f:if condition="{settings.flexForm.email} != ''">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['email'] = '<f:translate key="email" />: {settings.flexForm.email -> f:format.raw()}';
+									//--></script>
+								</f:then>
+							</f:if>
+							<script type="application/javascript"><!--
+								temp[_l]['image'] = "{f:uri.image(src: '{settings.flexForm.images}',width: '400',)}";
+							//--></script>
+							<f:if condition="{settings.flexForm.routeplanner} == 1">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['routeplanner'] = 1;
+									//--></script>
+								</f:then>
+								<f:else>
+									<script type="application/javascript"><!--
+									temp[_l]['routeplanner'] = 0;
+									//--></script>
+								</f:else>
+							</f:if>
+						</f:then>
+					</f:if>
+
+				</f:then>
+			</f:if>
+
+		</f:then>
+	</f:if>
+
+	<f:if condition="{settings.flexForm.MapTyp} == 2">
+		<f:then>
+			<f:if condition="{settings.flexForm.MapHeight} > 0">
+				<f:then>
+					<div id="mapid" style="height:{settings.flexForm.MapHeight}px;"></div>
+				</f:then>
+			</f:if>
+
+
+			<f:if condition="{settings.flexForm.MapLat} != ''">
+				<f:then>
+
+					<f:if condition="{settings.flexForm.MapLon} != ''">
+						<f:then>
+
+							<f:if condition="{settings.flexForm.zoom} != ''">
+								<f:then>
+
+
+									<script language="javascript">
+										<!--
+										var _lat = {settings.flexForm.MapLat -> f:format.raw()};
+										var _lon = {settings.flexForm.MapLon -> f:format.raw()};
+										var _zoom = {settings.flexForm.zoom -> f:format.raw()};
+										var _maxZoom = {settings.flexForm.maxZoom -> f:format.raw()};
+										var _MapTyp = {settings.flexForm.MapTyp -> f:format.raw()};
+
+										window.onload = function(){
+												init(_lat,_lon,_zoom,_maxZoom,_MapTyp);
+
+												if(temp.length > 0){
+													createPois(temp);
+												}
+										}
+
+										//-->
+									</script>
+
+
+								</f:then>
+							</f:if>
+
+						</f:then>
+					</f:if>
+
+				</f:then>
+			</f:if>
+
+			<f:if condition="{settings.flexForm.lat} != ''">
+				<f:then>
+					<f:if condition="{settings.flexForm.lon} != ''">
+						<f:then>
+
+							<f:if condition="{settings.flexForm.poiIconMarker} != ''">
+								<f:then>
+									<img src="{settings.flexForm.poiIconMarker -> f:format.raw()}" style="display:none;">
+								</f:then>
+							</f:if>
+							<f:if condition="{settings.flexForm.poiIconShadowMarker} != ''">
+								<f:then>
+									<img src="{settings.flexForm.poiIconShadowMarker -> f:format.raw()}" style="display:none;">
+								</f:then>
+							</f:if>
+
+							<script type="application/javascript"><!--
+
+							var temp = [];
+							var _l = temp.length;
+
+							temp[_l] = [];
+							temp[_l]['title'] = '{settings.flexForm.title -> f:format.raw()}';
+							temp[_l]['lat'] = {settings.flexForm.lat -> f:format.raw()};
+							temp[_l]['lon'] = {settings.flexForm.lon -> f:format.raw()};
+							temp[_l]['street'] = '{settings.flexForm.street -> f:format.raw()}';
+							temp[_l]['zip'] = '{settings.flexForm.zip -> f:format.raw()}';
+							temp[_l]['location'] = '{settings.flexForm.location -> f:format.raw()}';
+							temp[_l]['icon'] = '{settings.flexForm.poiIconMarker -> f:format.raw()}';
+							temp[_l]['icon-shadow'] = '{settings.flexForm.poiIconShadowMarker -> f:format.raw()}';
+
+							//--></script>
+
+							<f:if condition="{settings.flexForm.phone} != ''">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['phone'] = '<f:translate key="phone" />: {settings.flexForm.phone -> f:format.raw()}';
+									//--></script>
+								</f:then>
+							</f:if>
+							<f:if condition="{settings.flexForm.telefax} != ''">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['telefax'] = '<f:translate key="telefax" />: {settings.flexForm.telefax -> f:format.raw()}';
+									//--></script>
+								</f:then>
+							</f:if>
+							<f:if condition="{settings.flexForm.email} != ''">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['email'] = '<f:translate key="email" />: {settings.flexForm.email -> f:format.raw()}';
+									//--></script>
+								</f:then>
+							</f:if>
+							<script type="application/javascript"><!--
+							temp[_l]['image'] = "{f:uri.image(src: '{settings.flexForm.images}',width: '400',)}";
+							//--></script>
+							<f:if condition="{settings.flexForm.routeplanner} == 1">
+								<f:then>
+									<script type="application/javascript"><!--
+									temp[_l]['routeplanner'] = 1;
+									//--></script>
+								</f:then>
+								<f:else>
+									<script type="application/javascript"><!--
+									temp[_l]['routeplanner'] = 0;
+									//--></script>
+								</f:else>
+							</f:if>
+						</f:then>
+					</f:if>
+
+				</f:then>
+			</f:if>
+
+		</f:then>
+	</f:if>
+
+	<f:flashMessages />
+
+	<!--
+
+<table  class="tx_lbosm" >
+	<tr>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{oSMs}" as="oSM">
+		<tr>
+			<td><f:link.action action="edit" arguments="{oSM : oSM}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{oSM : oSM}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New OSM</f:link.action>
+	-->
+
+</f:section>
+
+</body>
+</html>
